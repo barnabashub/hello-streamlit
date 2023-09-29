@@ -70,8 +70,9 @@ treemap.animate(
 	Config(
 	    {
 	        "channels": {
-	            "label": "PRODUCTLINE",
+	            "label": "COUNTRY",
 	            "size": "QUANTITYORDERED",
+                "color": "COUNTRY",
 	        },
 	        "title": "Treemap",
 	    }
