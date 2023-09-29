@@ -3,12 +3,19 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 from streamlit_vizzu import Config, Data, Style, VizzuChart
+from ipyvizzu.animation import Config, Data, Style
+from ipyvizzustory import Slide, Step
+from ipyvizzustory.env.py.story import Story
+from ipyvizzustory import Story
 
 df = pd.read_csv("sales_data_sample.csv", sep=",", encoding='Latin-1')
 st.table(df[0:4])
 
 data = Data()
 data.add_data_frame(df)
+
+if "lastanim" not in st.session_state:
+    st.session_state.lastanim = []
 
 #Make a slider
 year1, year2 = st.select_slider(
@@ -101,3 +108,20 @@ donut.animate(
 	)
 )
 donut.show()
+
+
+#Save vizzu story
+#st.session_state.lastanim = [Data.filter(filter), Config(config)]
+save_all = st.checkbox("Save all", value=True)
+save_button = st.button("Save animation")
+print(st.session_state.lastanim)
+if st.session_state.lastanim:
+    print("első")
+    if save_all:
+        st.session_state.story.add_slide(Slide(Step(*st.session_state.lastanim)))
+        print("második")
+    else:
+        if save_button:
+            st.session_state.story.add_slide(Slide(Step(*st.session_state.lastanim)))
+print("vége")
+#Story.export_to_html(filename="mystory.html", self=st.session_state.)
