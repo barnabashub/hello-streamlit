@@ -67,6 +67,7 @@ treemap.animate(data)
 treemap.feature("tooltip", True)
 
 treemap.animate(
+    Data.filter(filters),
 	Config(
 	    {
 	        "channels": {
@@ -85,10 +86,11 @@ donut = VizzuChart(height=380, key="donutvizzu")
 donut.animate(data)
 donut.feature("tooltip", True)
 donut.animate(
+    Data.filter(filters),
 	Config(
 	    {
 	        "channels": {
-	            "x": "COUNTRY",
+	            "x": "DEALSIZE",
 	            "y": {"range": {"min": "-60%"}},
 	            #"color": "Joy factors",
 	            #"label": "YEAR_ID",
