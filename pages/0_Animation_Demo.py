@@ -112,7 +112,7 @@ treemap.animate(
 treemap.show()
 
 # Make donut chart for dealsizes
-st.write("The donut diagram shows us the distribution between the size of the filtered deals.")
+st.write("The donut diagram shows us the distribution of the income between the size of the deals.")
 donut = VizzuChart(height=380, key="donutvizzu")
 donut.animate(data)
 donut.feature("tooltip", True)
