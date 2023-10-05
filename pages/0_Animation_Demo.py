@@ -27,6 +27,7 @@ yearFilter = "record['YEAR_ID'] >= '{yearMin}' && record['YEAR_ID'] <= '{yearMax
     yearMin=year1, yearMax=year2)
 
 # Make select for productline
+st.write("You should select the product types to see the diagrams.")
 allFormats = df["PRODUCTLINE"].unique()
 defaultFormats = []
 items: List[str] = st.multiselect(
