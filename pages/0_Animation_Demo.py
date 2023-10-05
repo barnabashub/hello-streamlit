@@ -45,8 +45,8 @@ chart2.feature("tooltip", True)
 filters = "{} && {}".format(yearFilter, format_filter)
 bar_clicked = chart2.get("marker.categories.STATUS")
 
-st.text_area("Here you can see the statistics about the actual status of the ordered items.")
-st.text_area("If you click on a bar you can see the status distribution between the item categories.")
+st.write("Here you can see the statistics about the actual status of the ordered items.")
+st.write("If you click on a bar you can see the status distribution between the item categories.")
 
 if bar_clicked is None:
 
