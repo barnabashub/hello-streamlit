@@ -122,7 +122,7 @@ donut.animate(
         {
             "channels": {
                 "x": "DEALSIZE",
-                "y": "SALES"
+                "y": "SALES",
 #{"range": {"min": "0%"}},
                 "color": "DEALSIZE"
             },
