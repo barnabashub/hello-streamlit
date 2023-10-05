@@ -90,6 +90,7 @@ output = chart2.show()
 
 
 # Make treemap chart for countries
+st.write("In this treemap, you can see the distribution of the countries, who ordered the items and the size of them shows us the sum of ordered quantites.")
 treemap = VizzuChart(height=380, key="treemapvizzu")
 treemap.animate(data)
 treemap.feature("tooltip", True)
