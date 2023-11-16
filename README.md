@@ -1,7 +1,5 @@
-# Welcome to streamlit
+# Demo for vizzu streamlit
 
-This is the app you get when you run `streamlit hello`, extracted as its own app.
+You can see the result of my codes here: https://hello-app-6lqvryf275h.streamlit.app/
 
-Edit [Hello.py](./Hello.py) to customize this app to your heart's desire. ❤️
-
-Check it out on [Streamlit Community Cloud](https://st-hello-app.streamlit.app/)
+The demo is on the "Animation Demo" site of the menu.
